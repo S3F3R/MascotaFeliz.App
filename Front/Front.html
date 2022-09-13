@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mascota Feliz</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="images">
+        <img src = "pet.png" style = "width: 50%;
+        height:auto;
+        position:absolute;
+        left:315px;
+        top:7px;">
+    </div>
+    <div class="container">
+        <h2 style="color:white; text-align: center;  font-weight: bold; ">Mascota Feliz - Grupo 13 - Sub grupo #2</h2>
+        <div class="lbl-menu">
+            <label for="radio1">Registro y Consulta</label>
+            <label for="radio2">Registrar Visita PyP</label>
+            <label for="radio3">Historia</label>
+            <label for="radio4">Ayuda</label>
+        </div>
+        
+        <div class="content">
+           
+            <input type="radio" name="radio" id="radio1" checked>
+            <div class="tab1">
+                <h2>Registro y Consulta</h2>
+                <text>Por favor seleccione el Roll y Diligencie los respectivos campos.</text>
+                <script>
+                    document.getElementById('formDueno').style='display:block;';
+                    function setForm(value) {
+                        if(value == 'formMascota'){
+                            document.getElementById('formMascota').style='display:block;';
+                            document.getElementById('formDueno').style='display:none;';
+                            document.getElementById('formVeterinario').style='display:none;';
+                            document.getElementById("formMascota").reset();
+                            document.getElementById("formDueno").reset();
+                            document.getElementById("formVeterinario").reset();
+                        }
+                        if(value == 'formDueno') {
+                            document.getElementById('formMascota').style='display:none;';
+                            document.getElementById('formDueno').style='display:block;';
+                            document.getElementById('formVeterinario').style='display:none;';
+                            document.getElementById("formMascota").reset();
+                            document.getElementById("formDueno").reset();
+                            document.getElementById("formVeterinario").reset();
+                        }
+                        if(value == 'formVeterinario') {
+                            document.getElementById('formMascota').style='display:none;';
+                            document.getElementById('formDueno').style='display:none;';
+                            document.getElementById('formVeterinario').style='display:block;';
+                            document.getElementById("formMascota").reset();
+                            document.getElementById("formDueno").reset();
+                            document.getElementById("formVeterinario").reset();
+                        }
+                    }
+                </script>
+
+                <form>
+                    <select id="seleccion"onchange="setForm(this.value)">
+                        <option selected disabled="">Seleccione Roll*</option>
+                        <option value="formMascota">Mascota</option>
+                        <option value="formDueno">Dueño</option>
+                        <option value="formVeterinario">Veterinario</option>
+                    </select>
+                </form>
+
+                <form  id="formMascota" name="Mascota" action="" style="display: none">
+                    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+                    <input class="controls" type="text" name="Color" id="Color" placeholder="Color">
+                    <input class="controls" type="text" name="Especie" id="Especie" placeholder="Especie">
+                    <input class="controls" type="text" name="Raza" id="Raza" placeholder="Raza">
+                    <input class="controls" type="text" name="idDueno" id="idDueno" placeholder="ID del Dueño">
+                    <input class="controls" type="text" name="idVeterinario" id="idVeterinario" placeholder="ID del Veterinario">
+                    <input class="controls" type="text" name="idHistoria" id="idHistoria" placeholder="ID de Historia">
+                    <input class="botons" type="submit" id="RegistroMascota" value="Registrar Mascota" style="width:25%;left:25%;">
+                    <input class="botons" type="submit" id="ConsultaMascota" value="Consultar Mascota" style="width:25%;left:25%;">
+                </form>
+                <form id="formDueno" name="Dueno" action="" style="display: none">
+                    <input class="controls" type="text" name="DuenoNombre" id="DuenoNombre" placeholder="Nombres">
+                    <input class="controls" type="text" name="DuenoApellido" id="DuenoApellido" placeholder="Apellidos">
+                    <input class="controls" type="text" name="DuenoDireccion" id="DuenoDireccion" placeholder="Direccion">
+                    <input class="controls" type="text" name="DuenoTelefono" id="DuenoTelefono" placeholder="Telefono">
+                    <input class="controls" type="text" name="DuenoCorreo" id="DuenoCorreo" placeholder="Correo">
+                    <input class="botons" type="submit" id="RegistroDueno" value="Registrar Dueño" style="width:25%;left:25%;">
+                    <input class="botons" type="submit" id="ConsultaDueno" value="Consultar Dueno" style="width:25%;left:25%;">
+                </form>
+                <form  id="formVeterinario" name="Veterinario" action="" style="display: none">
+                    <input class="controls" type="text" name="VeterinarioNombre" id="VeterinarioNombre" placeholder="Nombres">
+                    <input class="controls" type="text" name="VeterinarioApellido" id="VeterinarioApellido" placeholder="Apellidos">
+                    <input class="controls" type="text" name="VeterinarioDireccion" id="VeterinarioDireccion" placeholder="Direccion">
+                    <input class="controls" type="text" name="VeterinarioTelefono" id="VeterinarioTelefono" placeholder="Telefono">
+                    <input class="controls" type="text" name="VeterinarioTarjetaProfesional" id="VeterinarioTarjetaProfesional" placeholder="Tarjeta Profesional">
+                    <input class="botons" type="submit" id="RegistroVeterinario" value="Registrar Veterinario" style="width:25%;left:25%;">
+                    <input class="botons" type="submit" id="ConsultaVeterinario" value="Consultar Veterinario" style="width:25%;left:25%;">
+                </form>
+            </div>
+            
+            <input type="radio" name="radio" id="radio2">
+            <div class="tab2">
+                <h2>Visita PyP</h2>
+                <text>Por favor diligencie los siguientes campos.</text>
+                <input class="controls" type="text" name="fechav" id="fechav" placeholder="Fecha de Visita">
+                <input class="controls" type="text" name="temperatura" id="temperatura" placeholder="Temperatura">
+                <input class="controls" type="text" name="peso" id="peso" placeholder="Peso">
+                <input class="controls" type="text" name="fr" id="fr" placeholder="Frecuencia Respiratoria">
+                <input class="controls" type="text" name="fc" id="fc" placeholder="Frecuencia Cardiaca">
+                <input class="controls" type="text" name="animo" id="animo" placeholder="Estado de Animo">
+                <input class="controls" type="text" name="idVeterinario" id="idVeterinario" placeholder="ID Veterinario">
+                <input class="controls" type="text" name="recomendaciones" id="recomendaciones" placeholder="Recomendaciones">
+                <input class="controls" type="text" name="idHistoria" id="idHistoria" placeholder="ID Historia">
+                <input class="botons" type="submit" value="Registrar Visita">
+            </div>
+            
+            <input type="radio" name="radio" id="radio3">
+            <div class="tab3">
+                <h2>Consulta de Historia</h2>
+                <input class="controls" type="text" name="idHistoria" id="idHistoria" placeholder="ID Historia">
+                <input class="botons" type="submit" value="Consultar Historia Clinica">
+            </div>
+            
+            <input type="radio" name="radio" id="radio4">
+            <div class="tab4">
+                <h2>Contacto</h2>
+                <text>Nuestros programadores estan listos para atenderte con cualquier consulta sobre tu Pagina o información en general acerca del desarrollo de la misma, para mas informacion por favor contactar a alguno de los siguientes correos:</text>
+                <text><br>sfruizl@correo.udistrital.edu.co<br>Daandresjaimes@gmail.com<br>jordanruizabella@gmail.com<br>juanpaluque@hotmail.com<br>juacarica@gmail.com</text>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

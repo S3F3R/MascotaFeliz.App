@@ -7263,7 +7263,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\Hardhy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -7271,11 +7271,11 @@
       "projectUniqueName": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
       "projectName": "MascotaFeliz.App.Persistencia",
       "projectPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Hardhy\\.nuget\\packages\\",
       "outputPath": "C:\\Mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Hardhy\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7337,7 +7337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.420\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
       }
     }
   }

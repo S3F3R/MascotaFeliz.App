@@ -17,11 +17,15 @@ namespace MascotaFeliz.App.Consola
                        
             //ListarDuenosFiltro();      
             //AddDueno();
-            //BuscarDueno(2);
+            BuscarDueno(3);
+            //DeleteDueno(1);
+            //UpdateDueno();
 
-            ListarVeterinariosFiltro();
+            //ListarVeterinariosFiltro();
             //AddVeterinario();
-            //BuscarVeterinario(1);
+            BuscarVeterinario(4);
+            //DeleteVeterinario(2);
+            //UpdateVeterinario();
             
 
         }
@@ -39,6 +43,25 @@ namespace MascotaFeliz.App.Consola
             _repoDueno.AddDueno(dueno);
         }
 
+        private static void DeleteDueno(int idDueno)
+        {
+            _repoDueno.DeleteDueno(idDueno);
+        }
+
+        private static void UpdateDueno()
+        {
+            var dueno = new Dueno
+            {
+                Nombres = "Luis Felipe",
+                Apellidos = "Fadul", 
+                Direccion = "Calle 145 # 158-15",
+                Telefono = "123456789",
+                Correo = "sebas@gmail.com",
+                Id = 3
+            };
+            _repoDueno.UpdateDueno(dueno);
+        }
+
          private static void AddVeterinario()
         {
             var veterinario = new Veterinario
@@ -52,16 +75,35 @@ namespace MascotaFeliz.App.Consola
             _repoVeterinario.AddVeterinario(veterinario);
         }
 
+        private static void DeleteVeterinario(int idVeterinario)
+        {
+            _repoVeterinario.DeleteVeterinario(idVeterinario);
+        }
+
+        private static void UpdateVeterinario()
+        {
+            var veterinario = new Veterinario
+            {
+                Nombres = "Sebastian",
+                Apellidos = "Ruiz", 
+                Direccion = "Calle 15 # 158-15",
+                Telefono = "666",
+                TarjetaProfesional = "TP5254",
+                Id = 4
+            };
+            _repoVeterinario.UpdateVeterinario(veterinario);
+        }
+
         private static void BuscarDueno(int idDueno)
         {
             var dueno = _repoDueno.GetDueno(idDueno);
-            Console.WriteLine(dueno.Nombres + " " + dueno.Apellidos);
+            Console.WriteLine("El dueño solicitado con el Id= "+dueno.Id+", Correponde a "+dueno.Nombres + " " + dueno.Apellidos);
         }
 
         private static void BuscarVeterinario(int idVeterinario)
         {
             var veterinario = _repoVeterinario.GetVeterinario(idVeterinario);
-            Console.WriteLine(veterinario.Nombres + " " + veterinario.Apellidos);
+            Console.WriteLine("El veterinario solicitado con el Id= "+veterinario.Id+", Correponde a "+veterinario.Nombres + " " + veterinario.Apellidos);
         }
 
         private static void ListarDuenosFiltro()
