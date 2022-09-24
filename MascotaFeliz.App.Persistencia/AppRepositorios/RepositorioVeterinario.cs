@@ -78,17 +78,9 @@ namespace MascotaFeliz.App.Persistencia
             {
                 veterinarioEncontrado.Nombres = veterinario.Nombres;
                 veterinarioEncontrado.Apellidos = veterinario.Apellidos;
-               
-
                 veterinarioEncontrado.Direccion = veterinario.Direccion;
                 veterinarioEncontrado.Telefono = veterinario.Telefono;
                 veterinarioEncontrado.TarjetaProfesional = veterinario.TarjetaProfesional;
-                
-
-
-
-
-
 
                 _appContext.SaveChanges();
 

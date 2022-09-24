@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mascota Feliz</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div>
+            <img src = "~/css/pet.png" alt="Image_Pets" class="Images_Pets">
+    </div>
+    <header>
+        <div class="container">
+            <ul class="content">
+                <a href="/Index">
+                    <img src ="~/css/Home.png" class="Logos">
+                </a>
+            </ul>
+            <br>
+            <ul class="lbl-menu">
+                <li class="lbl-menu">
+                    <a asp-area="" asp-page="/Mascotas/ListaMascotas">Mascotas</a>
+                </li>
+                <li class="lbl-menu">
+                    <a asp-area="" asp-page="/Duenos/ListaDuenos">Dueños</a>
+                </li>
+                <li class="lbl-menu">
+                    <a asp-area="" asp-page="/Veterinarios/ListaVeterinarios">Veterinarios</a>
+                </li>
+                <li class="lbl-menu">
+                    <a asp-area="" asp-page="/Privacy">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
