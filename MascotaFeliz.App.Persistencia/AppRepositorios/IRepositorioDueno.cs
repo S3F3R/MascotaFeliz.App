@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ namespace MascotaFeliz.App.Persistencia
         IEnumerable<Dueno> GetAllDuenos();
         Dueno AddDueno(Dueno dueno);
         Dueno UpdateDueno(Dueno dueno);
-        void DeleteDueno(int idDueno);
+        Dueno DeleteDueno(int idDueno);
         Dueno GetDueno(int idDueno);
         IEnumerable<Dueno> GetDuenosPorFiltro(string filtro);
     }

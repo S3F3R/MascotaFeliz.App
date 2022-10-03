@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +11,7 @@ namespace MascotaFeliz.App.Persistencia
         IEnumerable<Veterinario> GetAllVeterinarios();
         Veterinario AddVeterinario(Veterinario veterinario);
         Veterinario UpdateVeterinario(Veterinario veterinario);
-        void DeleteVeterinario(int idVeterinario);
+        Veterinario DeleteVeterinario(int idVeterinario);
         Veterinario GetVeterinario(int idVeterinario);
         IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro);
     }

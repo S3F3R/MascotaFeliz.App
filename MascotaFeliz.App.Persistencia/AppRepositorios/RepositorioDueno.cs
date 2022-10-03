@@ -17,6 +17,7 @@ namespace MascotaFeliz.App.Persistencia
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
+        
         public RepositorioDueno(AppContext appContext)
         {
             _appContext = appContext;
@@ -29,13 +30,14 @@ namespace MascotaFeliz.App.Persistencia
             return duenoAdicionado.Entity;
         }
 
-        public void DeleteDueno(int idDueno)
+        public Dueno DeleteDueno(int idDueno)
         {
             var duenoEncontrado = _appContext.Duenos.FirstOrDefault(d => d.Id == idDueno);
             if (duenoEncontrado == null)
-                return;
+                return duenoEncontrado;
             _appContext.Duenos.Remove(duenoEncontrado);
             _appContext.SaveChanges();
+            return duenoEncontrado;
         }
 
        public IEnumerable<Dueno> GetAllDuenos()

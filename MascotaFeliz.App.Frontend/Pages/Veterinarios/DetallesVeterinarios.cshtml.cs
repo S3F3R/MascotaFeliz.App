@@ -14,7 +14,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         private readonly IRepositorioVeterinario _repoVeterinario;
 
         public Veterinario veterinario {get; set;}
-
+        
         public DetallesVeterinariosModel()
         {
             this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());

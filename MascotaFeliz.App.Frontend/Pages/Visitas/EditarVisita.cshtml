@@ -1,0 +1,36 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.EditarVisitaModel
+
+@{
+    int mascotaId = Model.mascota.Id;
+}
+<div class = "content">
+    <h2>Agregar o Editar Visitas</h2>
+    <form method = "post">
+            <input type ="hidden" asp-for = "mascota.Id" />
+
+        <label>Id Veterinario</label>
+        <input type="text" name = "veterinarioId" value = "@Model.mascota.Veterinario.Id" />
+        <label>Id Historia</label>
+        <input type="text" name = "historiaId" value = "@Model.mascota.Historia.Id" /> <br>      
+        <label>Temperatura</label>
+        <input name="visitaPyP.Temperatura" class="form-control">
+        <label >Peso</label>
+        <input name="visitaPyP.Peso" class="form-control">
+        <label>FrecuenciaRespiratoria</label>
+        <input name="visitaPyP.FrecuenciaRespiratoria" class="form-control">
+        <label>FrecuenciaCardiaca</label>
+        <input name="visitaPyP.FrecuenciaCardiaca" class="form-control">
+        <label >EstadoAnimo</label>
+        <input name="visitaPyP.EstadoAnimo" class="form-control">
+        <label>Recomendaciones</label>
+        <input name="visitaPyP.Recomendaciones" class="form-control">
+
+
+        <button class="botons" type = "submit" >Guardar Registro</button>
+    </form>
+
+    <form class="center">
+        <a asp-page="./ListaVisitas" class ="botons">Lista de Visitas</a>
+    </form>
+</div>

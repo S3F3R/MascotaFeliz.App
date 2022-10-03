@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Hardhy\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Hardhy\\.nuget\\packages"
+      "C:\\Users\\jdani\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jdani\\.nuget\\packages"
     ]
   }
 }

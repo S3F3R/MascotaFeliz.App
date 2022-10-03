@@ -1,0 +1,53 @@
+<!-- TAREAS PARA EL SPRINT 2 :-->
+<!-- El sistema debe permitir el registro de una nueva mascota-->
+<!-- El sistema debe permitir el registro de un nuevo propietario-->
+<!-- El sistema debe permitir el registro de un nuevo veterinario-->
+<!-- El sistema debe permitir consultar una mascota-->
+<!-- El sistema debe permitir consultar el listado de todas las mascotas-->
+
+<!--Se debe instalar la extensión "Live Server"-->
+<!--No se debe cambiar el "charset="UTF-8", ya que ese es el que corresponde al ingles-->
+<!--"<title>Document<title> es el título que tendrá la página"-->
+<!-- Para construir el cuerpo de la página debe estar entre los dos <body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascota Feliz - Registro Mascotas</title>
+</head>
+<body>
+    <h1>Formulario de Registro de Mascotas</h1>
+    <!--IMAGENES DE MASCOTAS-->
+    <img src = https://sumedico.blob.core.windows.net/images/2021/04/14/posturasqueindicanqueunperroesfeliz-focus-0.04-0.2-640-384.jpg alt= "Perro Feliz" style="width:200px;height:200px;" >
+    <img src = https://scontent.fbog5-1.fna.fbcdn.net/v/t31.18172-8/25188783_10155924370728609_7978474888230014171_o.jpg?_nc_cat=101&ccb=1-7&_nc_sid=84a396&_nc_eui2=AeFeLzlsm9_JqExsT6AnMGh8RLRKrQqyH5xEtEqtCrIfnC9XX8fySDGbUimvn9comJchdklbBuuIdLzorJufc35D&_nc_ohc=WKT0gKkT7OYAX-csnTL&_nc_ht=scontent.fbog5-1.fna&oh=00_AT-tb8w_oSdxZtUg3rgrSrEnVYxawN12wKNBoviIIewQ4w&oe=6339F1DB style="width:200px;height:200px;" >
+    <img src = https://i.gifer.com/Z2l5.gif style="width:200px;height:200px;" >
+
+    <p>Diligencie el siguiente formulario para registrarse como Usuario, Veterinario o para registrar una mascota.</p>
+
+    <h2>Ingrese aquí la información de las mascotas</h2>
+    <h3> Seleccione la opción que desea registrar:</h3>
+    <form>
+        <input type="radio" id="usuario" name="opcion_registro" value="Usuario">
+        <label for="usuario">Usuario</label><br>
+        <input type="radio" id="veterinario" name="opcion_registro" value="Veterinario">
+        <label for="veterinario">Veterinario</label><br>
+        <input type="radio" id="mascota" name="opcion_registro" value="Mascota">
+        <label for="Mascota">Mascota</label>
+    </form> 
+    <br>
+    <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="">
+    </form>
+    <p>Ingreso otro <u><b>nuevo</b></u> párrafo aparte :3</p>  <!--Con <b> se pone en negrilla, con <u> subraya-->
+    
+    <a href="https://www.w3schools.com">MascotaFeliz.com</a>
+
+    
+</body>
+</html>

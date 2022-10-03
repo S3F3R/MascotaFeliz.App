@@ -10,26 +10,33 @@
         <table class="table">
             <thead>
                 <tr>
-                  <th>ID</th>
                   <th>Nombre</th>
                   <th>Especie</th>
-                  <th></th>
-                  <th></th>
+                  <th>Dueño</th>
                 </tr>
             </thead>
             <tbody>
             @foreach (var mascota in Model.listaMascotas)    
             {
                 <tr>
-                    <td>@mascota.Id</td>
                     <td>@mascota.Nombre</td>
                     <td>@mascota.Especie</td>
+                    <td>@mascota.Dueno.Nombres</td>
                     <td>
                         <a class="botons" asp-page="./DetallesMascotas" asp-route-mascotaId="@mascota.Id">Detalle Mascota</a>
                     </td>
                     <td>
                         <a class="botons" asp-page="./EditarMascotas" asp-route-mascotaId="@mascota.Id">Editar Mascota</a>
                     </td>
+
+                    <td>
+                        <a class="botons" asp-page="/Visitas/EditarVisita" asp-route-mascotaId="@mascota.Id">Crear Visita</a>
+                    </td>
+                    
+                    <td>
+                        <a class="botons" asp-page="/Historia/ListaHistoria" asp-route-mascotaId="@mascota.Id">Historia Mascota</a>
+                    </td>
+                    
                 </tr>
             }
             </tbody>

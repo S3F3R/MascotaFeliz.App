@@ -16,7 +16,15 @@
         <br>
         Raza : @Model.mascota.Raza
         <br>
+        Id Dueño : @Model.mascota.Dueno.Id
         <br>
+        Dueño : @Model.mascota.Dueno.Nombres @Model.mascota.Dueno.Apellidos
+        <br>
+        Id Veterinario : @Model.mascota.Veterinario.Id
+        <br>
+        Veterinario : @Model.mascota.Veterinario.Nombres @Model.mascota.Veterinario.Apellidos
+        <br>
+        ID Historia Clínica : @Model.mascota.Historia.Id
     </text>
     <form class="center">
         <a asp-page="./ListaMascotas" Class="botons">Lista de Mascotas</a>

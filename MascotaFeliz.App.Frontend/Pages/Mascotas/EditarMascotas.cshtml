@@ -7,16 +7,38 @@
     <h2>Agregar o Editar Mascotas</h2>
     <form method = "post">
             <input type ="hidden" asp-for = "mascota.Id" />
+
             <label class="text" asp-for = "mascota.Nombre"></label>
             <input class="controls" type="text" asp-for = "mascota.Nombre" placeholder="Nombre">
             <label class="text" asp-for = "mascota.Color"></label>
             <input class="controls" type="text" asp-for = "mascota.Color" placeholder="Color">
-            <label class="text" asp-for = "mascota.Especie"></label>
-            <input class="controls" type="text" asp-for = "mascota.Especie" placeholder="Especie">
             <label class="text" asp-for = "mascota.Raza"></label>
             <input class="controls" type="text" asp-for = "mascota.Raza" placeholder="Raza">
-            <button class="botons" type = "submit" >Grabar</button>
+            <label class="text" asp-for = "mascota.Especie"></label>
+            <input class="controls" type="text" asp-for = "mascota.Especie" placeholder="Especie">
+
+        <label for="dueno">Dueño</label>
+        <select id="dueno" asp-for="mascota.Dueno.Id" name = "duenoId">
+            <option value="0">Seleccione un Dueño</option>
+            @foreach (var dueno in Model.listaDuenos)
+            {
+                <option value="@dueno.Id">@dueno.Id @dueno.Nombres @dueno.Apellidos</option>
+            }
+        </select>
+
+        <label for="veterinario">Veterinario</label>
+        <select id="veterinario" asp-for="mascota.Veterinario.Id" name = "veterinarioId">
+            <option value="0">Seleccione un Veterinario</option>
+            @foreach (var veterinario in Model.listaVeterinarios)
+            {
+                <option value="@veterinario.Id">@veterinario.Id @veterinario.Nombres @veterinario.Apellidos</option>
+            }
+        </select>
+
+
+            <button class="botons" type = "submit" >Guardar Registro</button>
     </form>
+
     <form class="center">
         <a asp-page="./ListaMascotas" class ="botons">Lista de Mascotas</a>
     </form>

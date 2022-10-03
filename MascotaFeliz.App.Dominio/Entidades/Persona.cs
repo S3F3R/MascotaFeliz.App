@@ -1,4 +1,4 @@
-using System;
+using System; // Estoy importando la librería System
 namespace MascotaFeliz.App.Dominio
 {
     public class Persona

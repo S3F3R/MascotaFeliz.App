@@ -40,7 +40,7 @@ namespace MascotaFeliz.App.Frontend.Pages
             }
         }
 
-        public IActionResult OnPostGrabar()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
@@ -56,18 +56,5 @@ namespace MascotaFeliz.App.Frontend.Pages
             }
             return Page ();
         }
-
-        public IActionResult OnPostBorrar()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page ();
-            }
-            if (dueno.Id > 0)
-            {
-                _repoDueno.DeleteDueno(dueno.Id);
-            }
-            return Page ();
-        }        
     }
 }
